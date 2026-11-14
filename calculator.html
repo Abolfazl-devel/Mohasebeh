@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>محاسبه</title>
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+
+<body>
+
+  <div class="continer" id="continer">
+
+    <!-- start error -->
+    <div class="w-100">
+      <div class="error" id="error" style="display: none;">
+        <div class="error__close">
+          <img src="img/close.png" alt="بستن" id="error__close">
+        </div>
+        <div class="error__content">
+          <div class="error__content--text">
+            <span id="error__content--span"></span>
+          </div>
+          <div class="error__content--timer">
+            <svg viewBox="0 0 200 200">
+              <circle class="error__content--timer--background" cx="100" cy="100" r="90"></circle>
+              <circle class="error__content--timer--work" id="error__content--timer--work" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <p id="error__content--timer--number">4</p>
+          </div>
+        </div>
+        <div class="error__description">
+          <a href="#" target="_blank" id="error__description">توضیحات</a>
+        </div>
+      </div>
+    </div>
+    <!-- end error -->
+
+    <!-- start header -->
+
+    <div class="w-100 w-100-header">
+
+      <header class="header mx-width">
+
+        <label for="mobile-menu">
+
+          <img src="img/menu.png" alt="منو">
+
+        </label>
+
+        <input type="checkbox" id="mobile-menu">
+
+        <div class="mobile-menu">
+
+          <label for="mobile-menu" class="mobile-menu__close">
+
+            <img src="img/close.png" alt="بستن">
+
+          </label>
+
+          <a href="#"> ماشین حساب </a>
+
+          <a href="#"> سود مرکب </a>
+
+          <a href="#"> حل معادله </a>
+
+          <a href="#"> تماس با ما</a>
+
+        </div>
+
+        <a href="#" class="header__logo">
+
+          <img src="img/logo.png" alt="">
+
+          <h1> محاسبه </h1>
+
+        </a>
+
+        <div class="header__menu">
+
+          <a href="#"> ماشین حساب </a>
+
+          <a href="#"> سود مرکب </a>
+
+          <a href="#"> حل معادله </a>
+
+          <a href="#"> تماس با ما</a>
+
+        </div>
+
+        <div class="header__login">
+
+          <a href="#">ورود</a>
+
+          <a href="#">ثبت نام</a>
+
+        </div>
+
+      </header>
+
+    </div>
+
+    <!-- end header -->
+
+
+
+    <!-- start compound calculator -->
+
+    <div class="w-100 w-100-calculator">
+
+      <div class="calculator mx-width">
+
+        <div class="calculator__output">
+
+          <input type="text" id="calculator__output--input" value="0" inputmode="none" autofocus>
+
+        </div>
+
+        <div class="calculator__key">
+
+          <span class="calculator__key--button" id="calculator__key--AC">
+
+            <span>AC</span>
+
+          </span>
+
+          <span class="calculator__key--button" id="calculator__key--delete">
+
+            <img src="img/delete.png" alt="پاک کردن">
+
+          </span>
+
+          <span class="calculator__key--button" id="calculator__key--percent">%</span>
+
+          <span class="calculator__key--button" id="calculator__key--division">÷</span>
+
+          <span class="calculator__key--number" id="calculator__key--7">7</span>
+
+          <span class="calculator__key--number" id="calculator__key--8">8</span>
+
+          <span class="calculator__key--number" id="calculator__key--9">9</span>
+
+          <span class="calculator__key--button" id="calculator__key--multiplication">×</span>
+
+          <span class="calculator__key--number" id="calculator__key--4">4</span>
+
+          <span class="calculator__key--number" id="calculator__key--5">5</span>
+
+          <span class="calculator__key--number" id="calculator__key--6">6</span>
+
+          <span class="calculator__key--button" id="calculator__key--negative">-</span>
+
+          <span class="calculator__key--number" id="calculator__key--1">1</span>
+
+          <span class="calculator__key--number" id="calculator__key--2">2</span>
+
+          <span class="calculator__key--number" id="calculator__key--3">3</span>
+
+          <span class="calculator__key--button" id="calculator__key--plus">+</span>
+
+          <span class="calculator__key--special" id="calculator__key--point">.</span>
+
+          <span class="calculator__key--number" id="calculator__key--0">0</span>
+
+          <span class="calculator__key--button" id="calculator__key--equal">=</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- end compound calculator-->
+
+
+
+    <!-- start possibilities -->
+
+    <div class="w-100 w-100-possibilities">
+
+      <div class="possibilities mx-width">
+
+        <a href="#">
+
+          <img src="img/cosine.png" alt="محاسبه سینوس و کسینوس">
+
+          <p> محاسبه سینوس و کسینوس </p>
+
+        </a>
+
+        <a href="#">
+
+          <img src="img/time.png" alt="تبدیل تاریخ">
+
+          <p> تبدیل تاریخ </p>
+
+        </a>
+
+        <a href="#">
+
+          <img src="img/car.png" alt="محاسبه مسافت بین شهر ها">
+
+          <p> محاسبه مسافت بین شهرها </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- end possobilities -->
+
+
+
+    <!-- start description -->
+
+    <div class="w-100">
+
+      <div class="description mx-width">
+
+        <div class="description__title">
+
+          <p> ماشین حساب </p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> ماشین حساب سایت محاسبه بسیار واضح بوده و طوری طراحی شده که شما بدون نیاز به هیچ دانشی به راحتی میتوانید از
+
+            آن استفاده کنید. </p>
+
+        </div>
+
+        <div class="description__subtitle">
+
+          <p> نحوه کارکرد با ماشین حساب</p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> اصولا ما استفاده از این نوع ماشین حساب ها را در مدارس و در پایه ابتدایی یاد گرفتیم . </p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> ولی خب این ماشین حساب بیشتر برای یادگیری یا برای کسانی است که میخواهند خیلی سریع مسئله خود را حل کنند بدون
+
+            هیچ مکثی یا ایرادی. </p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p>همه ی ما میدونیم که علامت بعلاوه + به معنی اضافه کردن. علامت - منفی برای کم کردن. علامت% برای درصد گیری .
+
+            علامت تقسیم که شبیه علامت درصد بوده است با این تفاوت که خط آن به صورت مورب نیست. علامت ضرب را هم که همه ی ما
+
+            میشناسیم که به صورت ضربدر یا x انگلیسی است. شما با استفاده از گزینه AC میتوانید کل جواب به دست آورده خودتان
+
+            را پاک کنید. با گزینه ضربدری که داخل یک پرچم بوده میتوانید برای مثال یک عدد چهار رقمی را فقط یک رقم یا دو سه
+
+            رقم آن را پاک کنید. </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- end description -->
+
+
+
+    <!-- start footer -->
+
+    <div class="w-100 w-100-footer">
+
+      <footer class="footer mx-width">
+
+        <div class="footer__info">
+
+          <a href="#" class="footer__info--logo">
+
+            <img src="img/logo.png" alt="محاسبه">
+
+            <h1> محاسبه </h1>
+
+          </a>
+
+          <div class="footer__info--c-right">
+
+            <p> Copyright &copy; 2024 themes-fa.ir </p>
+
+            <p> تمامی حقوق متعلق به سایت تمزفا بوده <br> (themes-fa.ir) و هرگونه کپی برداری از سایت مجاز نمی باشد.</p>
+
+          </div>
+
+          <div class="footer__info--social-m">
+
+            <a href="#">
+
+              <img src="img/instagram.svg" alt="اینیستاگرام">
+
+              <img src="img/instagram-2.png" alt="اینیستاگرام">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/linkedin.png" alt="لینکدین">
+
+              <img src="img/linkedin-2.png" alt="لینکدین">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/x.png" alt="تویتتر">
+
+              <img src="img/x-2.png" alt="تویتتر">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/telegram.png" alt="تلگرام">
+
+              <img src="img/telegram-2.png" alt="تلگرام">
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer__links">
+
+          <p>دیگر صفحات ما</p>
+
+          <a href="#">سود مرکب</a>
+
+          <a href="#">ماشین حساب</a>
+
+          <a href="#">فاصله بین شهر ها</a>
+
+          <a href="#">محاسبه سینوس و کسینوس</a>
+
+          <a href="#">محاسبه تانژانت و کتانژانت</a>
+
+          <a href="#">تبدیل تاریخ</a>
+
+        </div>
+
+        <div class="footer__send-e">
+
+          <p>تماس با ما</p>
+
+          <div>
+
+            <input type="email" placeholder="ایمیل خود را وارد کنید.">
+
+            <img src="img/share.svg" alt="ارسال">
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+    <!-- end footer -->
+
+
+
+  </div>
+
+  <script src="js/calculator.js"></script>
+
+</body>
+
+
+
+</html>

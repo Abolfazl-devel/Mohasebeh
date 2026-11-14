@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title> محاسبه </title>
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+
+<body>
+
+  <div class="continer">
+
+
+    <!-- start header -->
+
+    <div class="w-100 w-100-header">
+
+      <header class="header mx-width">
+
+        <label for="mobile-menu">
+
+          <img src="img/menu.png" alt="منو">
+
+        </label>
+
+        <input type="checkbox" id="mobile-menu">
+
+        <div class="mobile-menu">
+
+          <label for="mobile-menu" class="mobile-menu__close">
+
+            <img src="img/close.png" alt="بستن">
+
+          </label>
+
+          <a href="#"> ماشین حساب </a>
+
+          <a href="#"> سود مرکب </a>
+
+          <a href="#"> حل معادله </a>
+
+          <a href="#"> تماس با ما</a>
+
+        </div>
+
+        <a href="#" class="header__logo">
+
+          <img src="img/logo.png" alt="">
+
+          <h1> محاسبه </h1>
+
+        </a>
+
+        <div class="header__menu">
+
+          <a href="#"> ماشین حساب </a>
+
+          <a href="#"> سود مرکب </a>
+
+          <a href="#"> حل معادله </a>
+
+          <a href="#"> تماس با ما</a>
+
+        </div>
+
+        <div class="header__login">
+
+          <a href="#">ورود</a>
+
+          <a href="#">ثبت نام</a>
+
+        </div>
+
+      </header>
+
+    </div>
+
+    <!-- end header -->
+
+
+
+    <!-- start calculator-->
+
+    <div class="w-100 w-100-calculator">
+
+      <div class="compound-calculator mx-width">
+
+        <div class="compound-calculator__title">
+
+          <p> محاسبه سود مرکب </p>
+
+        </div>
+
+        <div class="compound-calculator__money">
+
+          <label for="input_money"> مقدار اولیه : </label>
+
+          <input type="text" value="100" id="input_money">
+
+        </div>
+
+        <div class="compound-calculator__precent">
+
+          <label for=""> درصد : </label>
+
+          <input type="text" value="5" id="input_percent">
+
+        </div>
+
+        <div class="compound-calculator__time">
+
+          <label for=""> تعداد دفعات : </label>
+
+          <input type="text" value="1" id="input_time">
+
+        </div>
+
+        <div class="compound-calculator__button">
+
+          <button>
+
+            <img src="img/calculator.png" alt="محاسبه">
+
+            <span> محاسبه </span>
+
+          </button>
+
+        </div>
+
+        <div class="compound-calculator__output-title">
+
+          <p> خروجی: </p>
+
+        </div>
+
+        <div class="compound-calculator__output" id="calculator__output"></div>
+
+      </div>
+
+    </div>
+
+    <!-- end calculator -->
+
+
+
+    <!-- start possibilities -->
+
+    <div class="w-100 w-100-possibilities">
+
+      <div class="possibilities mx-width">
+
+        <a href="#">
+
+          <img src="img/cosine.png" alt="محاسبه سینوس و کسینوس">
+
+          <p> محاسبه سینوس و کسینوس </p>
+
+        </a>
+
+        <a href="#">
+
+          <img src="img/time.png" alt="تبدیل تاریخ">
+
+          <p> تبدیل تاریخ </p>
+
+        </a>
+
+        <a href="#">
+
+          <img src="img/car.png" alt="محاسبه مسافت بین شهر ها">
+
+          <p> محاسبه مسافت بین شهرها </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- end possobilities -->
+
+
+
+    <!-- start description -->
+
+    <div class="w-100">
+
+      <div class="description mx-width">
+
+        <div class="description__title">
+
+          <p> سود مرکب </p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> با استفاده از سود مرکب شما می توانید سود خود از بانک و بازار مالی و... در هر ماه یا هر دفعه حساب کنید .
+
+          </p>
+
+        </div>
+
+        <div class="description__subtitle">
+
+          <p> نحوه کارکرد سود مرکب </p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> در بخش مقدار اولیه شما مقدار پول یا سرمایه خود را وارد میکنید .</p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> و در یخش دوم مقدار سود خودتون رو به صورت درصد در هر ماه یا هر دفعه وارد میکنید .</p>
+
+        </div>
+
+        <div class="description__text">
+
+          <p> در بخش تعداد دفعات تعداد سود خودتون رو که از بانک یا بازار مالی دریافت میکنید وارد میکنید (یکی از ویژگی
+
+            های خوب سایت <a href="#">محاسبه </a> این که تعداد دفعاتی که شما وارد میکنید محدود نیست و شما به راحتی
+
+            میتوانید هر تعدادی که سود دریافت میکنید را به راحتی به دست بیارید).</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- end description -->
+
+
+
+    <!-- start footer -->
+
+    <div class="w-100 w-100-footer">
+
+      <footer class="footer mx-width">
+
+        <div class="footer__info">
+
+          <a href="#" class="footer__info--logo">
+
+            <img src="img/logo.png" alt="محاسبه">
+
+            <h1> محاسبه </h1>
+
+          </a>
+
+          <div class="footer__info--c-right">
+
+            <p> Copyright &copy; 2024 themes-fa.ir </p>
+
+            <p> تمامی حقوق متعلق به سایت تمزفا بوده <br> (themes-fa.ir) و هرگونه کپی برداری از سایت مجاز نمی باشد.</p>
+
+          </div>
+
+          <div class="footer__info--social-m">
+
+            <a href="#">
+
+              <img src="img/instagram.svg" alt="اینیستاگرام">
+
+              <img src="img/instagram-2.png" alt="اینیستاگرام">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/linkedin.png" alt="لینکدین">
+
+              <img src="img/linkedin-2.png" alt="لینکدین">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/x.png" alt="تویتتر">
+
+              <img src="img/x-2.png" alt="تویتتر">
+
+            </a>
+
+            <a href="#">
+
+              <img src="img/telegram.png" alt="تلگرام">
+
+              <img src="img/telegram-2.png" alt="تلگرام">
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer__links">
+
+          <p>دیگر صفحات ما</p>
+
+          <a href="#">سود مرکب</a>
+
+          <a href="#">ماشین حساب</a>
+
+          <a href="#">فاصله بین شهر ها</a>
+
+          <a href="#">محاسبه سینوس و کسینوس</a>
+
+          <a href="#">محاسبه تانژانت و کتانژانت</a>
+
+          <a href="#">تبدیل تاریخ</a>
+
+        </div>
+
+        <div class="footer__send-e">
+
+          <p>تماس با ما</p>
+
+          <div>
+
+            <input type="email" placeholder="ایمیل خود را وارد کنید.">
+
+            <img src="img/share.svg" alt="ارسال">
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+    <!-- end footer -->
+
+
+
+  </div>
+
+  <script src="js/compound-interest.js"></script>
+
+</body>
+
+
+
+</html>
