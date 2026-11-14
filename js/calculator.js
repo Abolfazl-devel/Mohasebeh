@@ -37,32 +37,14 @@ var errordiscription = document.getElementById('error__description');
 var deleteMath = document.getElementById('calculator__key--delete');
 //delete
 
-//operators
-var percent = document.getElementById('calculator__key--percent');
-var division = document.getElementById('calculator__key--division');
-var multiplication = document.getElementById('calculator__key--multiplication');
-var negative = document.getElementById('calculator__key--negative');
-var plus = document.getElementById('calculator__key--plus');
-var point = document.getElementById('calculator__key--point');
-var equal = document.getElementById('calculator__key--equal');
-//operators
 
-//numbers
-var number9 = document.getElementById('calculator__key--9');
-var number8 = document.getElementById('calculator__key--8');
-var number7 = document.getElementById('calculator__key--7');
-var number6 = document.getElementById('calculator__key--6');
-var number5 = document.getElementById('calculator__key--5');
-var number4 = document.getElementById('calculator__key--4');
-var number3 = document.getElementById('calculator__key--3');
-var number2 = document.getElementById('calculator__key--2');
-var number1 = document.getElementById('calculator__key--1');
-var number0 = document.getElementById('calculator__key--0');
-// numbers
+// calculate var
+var equal = document.getElementById('calculator__key--equal');
+// calculate var
 
 // separation of numbers
 var cursorPosition = '';
-var newCursorPosition = ''; 
+var newCursorPosition = '';
 var formattedValue = '';
 function separator() {
     diff = '';
@@ -140,7 +122,9 @@ output.addEventListener('focus', function () {
 // keep curser if input focus
 
 // type number after zero
-function typeNO(numbersOprators) {
+//operators and numbers (writing keys)
+const writingKeys = document.querySelectorAll('.writing-keys');
+writingKeys.forEach(function (numbersOprators) {
     numbersOprators.onclick = function () {
         substringOutput();
         separator();
@@ -152,23 +136,8 @@ function typeNO(numbersOprators) {
         numberAfterZero();
         typeright();
     };
-};
-typeNO(percent);
-typeNO(division);
-typeNO(multiplication);
-typeNO(negative);
-typeNO(plus);
-typeNO(point);
-typeNO(number9);
-typeNO(number8);
-typeNO(number7);
-typeNO(number6);
-typeNO(number5);
-typeNO(number4);
-typeNO(number3);
-typeNO(number2);
-typeNO(number1);
-typeNO(number0);
+});
+//operators and numbers (writing keys)
 document.addEventListener('keypress', function (press) {
     if (press.key === '*') {
         substringOutput();
