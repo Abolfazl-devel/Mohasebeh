@@ -1,8 +1,8 @@
 'use strict';
 
 //output
-var output = document.getElementById('calculator__output--input');
-var outputValue = output.value;
+const output = document.getElementById('calculator__output--input');
+let outputValue = output.value;
 //output
 
 // replace with position function
@@ -18,51 +18,51 @@ output.selectionStart = 1;
 // Correct input cursor postion at relodaing page
 
 //AC
-var AC = document.getElementById('calculator__key--AC');
+const AC = document.getElementById('calculator__key--AC');
 //AC
 
 // error
-var error = document.getElementById('error');
+const error = document.getElementById('error');
 //error
 
 // errorText
-var errorText = document.getElementById('error__content--span');
+const errorText = document.getElementById('error__content--span');
 // errorText
 
 // error Close
-var closeError = document.getElementById('error__content--span');
+const closeError = document.getElementById('error__content--span');
 // error Close
 
 // error discription
-var errordiscription = document.getElementById('error__description');
+const errordiscription = document.getElementById('error__description');
 // error discription
 
 //delete
-var deleteMath = document.getElementById('calculator__key--delete');
+const deleteMath = document.getElementById('calculator__key--delete');
 //delete
 
 // calculate var
-var equal = document.getElementById('calculator__key--equal');
+const equal = document.getElementById('calculator__key--equal');
 // calculate var
 
 // separation of numbers
-var cursorPosition = '';
-var newCursorPosition = '';
-var formattedValue = '';
+let cursorPosition = '';
+let newCursorPosition = '';
+let formattedValue = '';
 function separator() {
-    diff = '';
+    let diff = '';
     cursorPosition = '';
     cursorPosition = output.selectionStart;
     substringOutput();
     if (output.value.match(/[^0-9+\-÷%,.×]/)) {
-        var outputTypeNumber = output.value.replace(/[^0-9+\-÷%,.×]/g, '');
+        const outputTypeNumber = output.value.replace(/[^0-9+\-÷%,.×]/g, '');
         output.value = outputTypeNumber;
         output.selectionStart = cursorPosition - 1;
         output.selectionEnd = cursorPosition - 1;
 
     } else {
         formattedValue = output.value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        var diff = formattedValue.length - output.value.length;
+        diff = formattedValue.length - output.value.length;
         output.value = formattedValue;
         newCursorPosition = cursorPosition + (diff > 0 ? diff : 0);
         output.selectionStart = newCursorPosition;
@@ -72,8 +72,8 @@ function separator() {
 };
 
 //substring input value function
-var substringOutputValue1 = '';
-var substringOutputValue2 = '';
+let substringOutputValue1 = '';
+let substringOutputValue2 = '';
 function substringOutput() {
     substringOutputValue1 = output.value.substring(0, cursorPosition);
     substringOutputValue2 = output.value.substring(cursorPosition, output.value.length);
@@ -86,10 +86,10 @@ output.addEventListener('input', function () {
 
 
 // type number after zero
-var allNumbers = '';
-var findOperator = [];
-var numberAfterOperatorsPosition = [];
-var numberAfterOperatorsCharacter = '';
+let allNumbers = '';
+let findOperator = [];
+let numberAfterOperatorsPosition = [];
+let numberAfterOperatorsCharacter = '';
 function numberAfterZero() {
     // type number after zero first character
     allNumbers = '';
@@ -103,11 +103,11 @@ function numberAfterZero() {
     findOperator = [];
     numberAfterOperatorsPosition = [];
     numberAfterOperatorsCharacter = '';
-    for (var i = 0; i < output.value.length; i++) {
+    for (let i = 0; i < output.value.length; i++) {
         if ((output.value[i] == '+') || (output.value[i] == '-') || (output.value[i] == '÷') || (output.value[i] == '×')) findOperator.push(i);
     };
     numberAfterOperatorsPosition = findOperator.slice();
-    for (var t = 0; t < numberAfterOperatorsPosition.length; t++) {
+    for (let t = 0; t < numberAfterOperatorsPosition.length; t++) {
         numberAfterOperatorsPosition[t] += 1;
         numberAfterOperatorsCharacter = output.value.substring(numberAfterOperatorsPosition[t]);
         if (numberAfterOperatorsCharacter[0] == '0' && (numberAfterOperatorsCharacter[1] == '0' || numberAfterOperatorsCharacter[1] == '1' || numberAfterOperatorsCharacter[1] == '2' || numberAfterOperatorsCharacter[1] == '3' || numberAfterOperatorsCharacter[1] == '4' || numberAfterOperatorsCharacter[1] == '5' || numberAfterOperatorsCharacter[1] == '6' || numberAfterOperatorsCharacter[1] == '7' || numberAfterOperatorsCharacter[1] == '8' || numberAfterOperatorsCharacter[1] == '9')) {
@@ -118,7 +118,7 @@ function numberAfterZero() {
 
 // keep curser if input focus 
 output.addEventListener('focus', function () {
-    var diff = formattedValue.length - output.value.length;
+    const diff = formattedValue.length - output.value.length;
     newCursorPosition = cursorPosition + (diff > 0 ? diff : 0);
 
 });
@@ -174,7 +174,7 @@ function deleteC() {
     cursorPosition = output.selectionStart;
     if ((output.value.length > 1)) {
         separator();
-        var deleteM = replaceCharAt(output.value, cursorPosition - 1, '');
+        const deleteM = replaceCharAt(output.value, cursorPosition - 1, '');
         output.value = deleteM;
         output.selectionStart = newCursorPosition - 1;
         output.selectionEnd = newCursorPosition - 1;
@@ -214,23 +214,24 @@ function scrollFocus() {
 // input always focus
 
 //special type
-var lastchanges = '';
-var lastC = '';
-var percentForMultiplication = [];
+let lastchanges = '';
+let lastC = '';
+let percentForMultiplication = [];
 function typeright() {
     cursorPosition = output.selectionStart;
-    var diff = (diff > 0 ? diff : 0);
+    let diff
+    diff = (diff > 0 ? diff : 0);
     newCursorPosition = cursorPosition + (diff > 0 ? diff : 0);
     outputValue = output.value;
     percentForMultiplication = [];
     lastC = '';
     lastchanges = '';
-    var newValue = '';
-    for (var i = 0; i < output.value.length; i++) {
+    let newValue = '';
+    for (let i = 0; i < output.value.length; i++) {
         if (output.value[i] == '%') percentForMultiplication.push(i);
     };
-    for (var t = 0; t < percentForMultiplication.length; t++) {
-        var pos = percentForMultiplication[t];
+    for (let t = 0; t < percentForMultiplication.length; t++) {
+        const pos = percentForMultiplication[t];
         if (pos < output.value.length - 1 && !isNaN(output.value[pos + 1])) {
             output.value = output.value.slice(0, pos + 1) + '×' + output.value.slice(pos + 1);
         };
@@ -260,9 +261,9 @@ output.addEventListener('input', function () {
 // special type
 
 //error computing
-var check = '';
+let check = '';
 function checkOpretors() {
-    var operatorsRegex = /[\+\-\×\÷]{2,}/;
+    const operatorsRegex = /[\+\-\×\÷]{2,}/;
     check = operatorsRegex.test(output.value);
 };
 output.addEventListener('input', function () {
@@ -280,19 +281,19 @@ function errorCalculation() {
             errorText.textContent = 'لطفا دو oprator (عملگر) را در معادله کنار هم قرار ندهید.' + 'لطفا در آخر معادله oprator (عملگر) قرار ندهید.';
         };
         error.style.display = 'block';
-        var timer = 4;
-        var showtimer = timer;
-        var timerDisplay = document.getElementById('error__content--timer--number');
-        var circle = document.getElementById('error__content--timer--work');
-        var radius = circle.r.baseVal.value;
-        var calculationRadius = 2 * Math.PI * radius;
+        const timer = 4;
+        let showtimer = timer;
+        const timerDisplay = document.getElementById('error__content--timer--number');
+        const circle = document.getElementById('error__content--timer--work');
+        const radius = circle.r.baseVal.value;
+        const calculationRadius = 2 * Math.PI * radius;
         circle.style.strokeDasharray = `${calculationRadius} ${calculationRadius}`;
         timerDisplay.textContent = 4;
 
         function timerF() {
             showtimer--;
             timerDisplay.textContent = showtimer;
-            var addWhite = calculationRadius - (showtimer / timer) * calculationRadius;
+            const addWhite = calculationRadius - (showtimer / timer) * calculationRadius;
             circle.style.strokeDashoffset = addWhite;
             if (showtimer > 0) {
                 setTimeout(timerF, 1000);
@@ -318,18 +319,19 @@ function errorCalculation() {
 //error computing
 
 //computing 
-var numberA1 = '';
-var numberA2 = '';
-var special = '';
-var specialsForSeparate = ['+', '-', '×', '÷', '%'];
-var answer = '';
-var operatorsAfterPercentCharacterForCalculation = '';
-var outputValueBeforeComputing = '';
-var operatorsBeforeComputing = [];
-var negativeNumbersCalculation = '';
-var opreatorAfterPercentPosition = '';
-var opreatorAfterPercentCharacter = '';
-var numberAfterPercent = '';
+let numberA1 = '';
+let numberA2 = '';
+let special = '';
+const specialsForSeparate = ['+', '-', '×', '÷', '%'];
+let answer = '';
+//
+const operatorsAfterPercentCharacterForCalculation = '';
+let outputValueBeforeComputing = '';
+let operatorsBeforeComputing = [];
+let negativeNumbersCalculation = '';
+let opreatorAfterPercentPosition = '';
+let opreatorAfterPercentCharacter = '';
+let numberAfterPercent = '';
 function firstStepOfCalculation() {
     outputValueBeforeComputing = '';
     operatorsBeforeComputing = [];
@@ -344,10 +346,10 @@ function firstStepOfCalculation() {
 
     function calcPercent() {
         while (output.value.includes('%')) {
-            var findPercent = output.value.search('%');
-            var numberAfterPercentReverse = [];
+            const findPercent = output.value.search('%');
+            let numberAfterPercentReverse = [];
 
-            for (var t = findPercent - 1; t >= 0; t--) {
+            for (let t = findPercent - 1; t >= 0; t--) {
                 if (!specialsForSeparate.includes(output.value[t]) && output.value[t] !== '') {
                     numberAfterPercentReverse.push(output.value[t]);
                 } else {
@@ -355,16 +357,16 @@ function firstStepOfCalculation() {
                 }
             }
 
-            var numberAfterPercent = numberAfterPercentReverse.reverse().join('');
+            numberAfterPercent = numberAfterPercentReverse.reverse().join('');
             numberAfterPercent = Number(numberAfterPercent) / 100;
             output.value = output.value.replace('%', '');
-            var startIndex = findPercent - numberAfterPercentReverse.length;
+            const startIndex = findPercent - numberAfterPercentReverse.length;
             output.value = output.value.slice(0, startIndex) + numberAfterPercent + output.value.slice(findPercent);
         };
     };
 
     calcPercent();
-    for (var m = 0; m <= outputValueBeforeComputing.length; m++) {
+    for (let m = 0; m <= outputValueBeforeComputing.length; m++) {
         if (outputValueBeforeComputing[m] == '+' || outputValueBeforeComputing[m] == '-' || outputValueBeforeComputing[m] == '×' || outputValueBeforeComputing[m] == '÷' || outputValueBeforeComputing[[m]] == '%') operatorsBeforeComputing.push(m);
     };
 
@@ -379,14 +381,15 @@ function firstStepOfCalculation() {
     };
 
     function first_step_of_calculation(outputValue) {
-        for (var i = 0; i < output.value.length; i++) {
+        let i;
+        for (i = 0; i < output.value.length; i++) {
             if (specialsForSeparate.includes(output.value[i])) {
                 special = output.value[i];
                 break;
             };
             numberA1 += output.value[i];
         };
-        for (var t = i + 1; t < output.value.length; t++) {
+        for (let t = i + 1; t < output.value.length; t++) {
             if (specialsForSeparate.includes(output.value[t])) {
                 numberA2 += output.value[t];
                 break;
@@ -401,7 +404,7 @@ function firstStepOfCalculation() {
         return { extractionN1: Number(numberA1), extractionS: special, extractionN2: Number(numberA2) };
 
     };
-    var { extractionN1, extractionS, extractionN2 } = first_step_of_calculation(outputValue);
+    let { extractionN1, extractionS, extractionN2 } = first_step_of_calculation(outputValue);
     numberA1 = numberA1.replace(/,/g, '');
     numberA2 = numberA2.replace(/,/g, '');
     switch (special) {
@@ -419,7 +422,7 @@ function firstStepOfCalculation() {
             break;
     };
     findOperator = [];
-    for (var i = 0; i < output.value.length; i++) {
+    for (let i = 0; i < output.value.length; i++) {
 
         if ((output.value[i] == '+') || (output.value[i] == '-') || (output.value[i] == '÷') || (output.value[i] == '×')) findOperator.push(i);
 
@@ -434,7 +437,7 @@ function firstStepOfCalculation() {
         } else {
             output.value = output.value.replace(output.value.substring(0, findOperator[1]), '');
         };
-        for (var x = 0; x < operatorsBeforeComputing.length - 1; x++) {
+        for (let x = 0; x < operatorsBeforeComputing.length - 1; x++) {
             secondStepOfCalculation();
         };
     }
@@ -455,7 +458,7 @@ function secondStepOfCalculation() {
             special = output.value[0];
             output.value = replaceCharAt(output.value, 0, '');
         };
-        for (var i = 0; i < output.value.length; i++) {
+        for (let i = 0; i < output.value.length; i++) {
 
             if (specialsForSeparate.includes(output.value[i])) {
                 break;
@@ -469,7 +472,7 @@ function secondStepOfCalculation() {
     };
 
     findOperator = [];
-    for (var t = 0; t < output.value.length; t++) {
+    for (let t = 0; t < output.value.length; t++) {
 
         if ((output.value[t] == '+') || (output.value[t] == '-') || (output.value[t] == '÷') || (output.value[t] == '×')) findOperator.push(t);
 
