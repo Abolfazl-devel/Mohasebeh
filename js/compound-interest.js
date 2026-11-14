@@ -1,18 +1,17 @@
 'use strict';
-// مقدار اولیه
+// input
 var money = document.getElementById('input_money');
-// مقدار اولیه
+// input
 
-// درصد افزایش
+// percent
 var percent = document.getElementById('input_percent');
-// درصد افزایش
+// percent
 
-//تعداد دفعات
+//time
 var time = document.getElementById('input_time');
-// تعداد دفعات
+//time
 
-// تایپ اعداد
-//تفکیک اعداد
+//Seperate numbers
 function sanitizeInput(inputElement) {
   inputElement.oninput = function () {
     inputElement.value = inputElement.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1');
@@ -24,10 +23,10 @@ function sanitizeInput(inputElement) {
 sanitizeInput(money);
 sanitizeInput(percent);
 sanitizeInput(time);
-// تایپ اعداد
-// تفکیک اعداد
+//Seperate numbers
 
-//محاسبه
+
+//Calculate
 var computing = document.getElementsByClassName('compound-calculator__button')[0];
 var output_div = document.getElementById('calculator__output');
 
@@ -56,4 +55,4 @@ document.addEventListener('keyup', function (press) {
     calculation();
   };
 });
-//محاسبه
+//Calculate
