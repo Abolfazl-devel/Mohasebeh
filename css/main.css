@@ -22,6 +22,17 @@
 
 /* font */
 
+/* Colors */
+:root {
+    --tj-body: #c1c1c1;
+    --tj-white: #ffffff;
+    --tj-off-white: #d3d3d3;
+    --tj-theme-primary: #30a76d;
+}
+
+/* Colors */
+
+
 
 
 /* width 100% */
@@ -62,7 +73,7 @@
 
 html {
 
-    scrollbar-color: #30a76d #fff;
+    scrollbar-color: var(--tj-theme-primary) var(--tj-white);
 
 }
 
@@ -74,7 +85,7 @@ html {
 .error {
     position: absolute;
     width: 700px;
-    background-color: #fff;
+    background-color: var(--tj-white);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 15px;
     box-sizing: border-box;
@@ -97,7 +108,7 @@ html {
     right: 0;
     top: 59px;
     content: '';
-    border-bottom: 2px solid #c1c1c1;
+    border-bottom: 2px solid var(--tj-body);
     width: 100%;
 }
 
@@ -134,7 +145,7 @@ html {
 }
 
 .error__content--timer--background {
-    stroke: #fff;
+    stroke: var(--tj-white);
 }
 
 .error__content--timer--work {
@@ -157,15 +168,17 @@ html {
     bottom: 67px;
     right: 0;
     content: '';
-    border-bottom: 2px solid #c1c1c1;
+    border-bottom: 2px solid var(--tj-body);
     width: 100%;
-    
+
 }
+
 .error__description {
     margin-top: 52px;
-    
+
 }
-.error__description > a {
+
+.error__description>a {
     color: #4b92da;
     font-size: 20px;
     text-decoration: underline;
@@ -187,7 +200,7 @@ html {
 
     background-color: #f9f9f9;
 
-    border-bottom: 1px solid #c1c1c1;
+    border-bottom: 1px solid var(--tj-body);
 
 }
 
@@ -253,7 +266,7 @@ input[id=mobile-menu] {
 
     transition: all linear 0.3s;
 
-    background-color: #fff;
+    background-color: var(--tj-white);
 
     width: 80%;
 
@@ -313,7 +326,7 @@ input[id=mobile-menu] {
 
     right: -14px;
 
-    color: #fff;
+    color: var(--tj-white);
 
     transition: all linear 0.3s;
 
@@ -327,7 +340,7 @@ input[id=mobile-menu] {
 
     font-size: 30px;
 
-    color: #30a76d;
+    color: var(--tj-theme-primary);
 
 }
 
@@ -385,7 +398,7 @@ input[id=mobile-menu] {
 
     width: 100px;
 
-    color: #30a76d;
+    color: var(--tj-theme-primary);
 
     display: flex;
 
@@ -401,9 +414,9 @@ input[id=mobile-menu] {
 
 .header__login a:first-child {
 
-    color: #fff;
+    color: var(--tj-white);
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
 }
 
@@ -413,7 +426,7 @@ input[id=mobile-menu] {
 
 .header__menu a:hover {
 
-    color: #30a76d;
+    color: var(--tj-theme-primary);
 
     transition: all ease 0.3s;
 
@@ -423,9 +436,9 @@ input[id=mobile-menu] {
 
 .mobile-menu>a:hover {
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
-    color: #fff;
+    color: var(--tj-white);
 
 }
 
@@ -585,7 +598,7 @@ input[id=mobile-menu]:checked+div {
 
     box-sizing: border-box;
 
-    border: 3px solid #d3d3d3;
+    border: 3px solid var(--tj-off-white);
 
     border-radius: 11px;
 
@@ -623,7 +636,7 @@ input[id=mobile-menu]:checked+div {
 
     width: 475px;
 
-    border: 2px solid #d3d3d3;
+    border: 2px solid var(--tj-off-white);
 
     border-radius: 11px;
 
@@ -647,9 +660,9 @@ input[id=mobile-menu]:checked+div {
 
 .compound-calculator__button button {
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
-    color: #fff;
+    color: var(--tj-white);
 
     border: none;
 
@@ -683,13 +696,13 @@ input[id=mobile-menu]:checked+div {
 
 .compound-calculator__output {
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
     overflow-y: scroll;
 
     height: 160px;
 
-    color: #fff;
+    color: var(--tj-white);
 
     padding: 20px 15px;
 
@@ -697,7 +710,7 @@ input[id=mobile-menu]:checked+div {
 
     border-radius: 10px;
 
-    scrollbar-color: #30a76d #fff;
+    scrollbar-color: var(--tj-theme-primary) var(--tj-white);
 
 }
 
@@ -731,7 +744,7 @@ input[id=mobile-menu]:checked+div {
 
 .w-100-possibilities {
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
     position: relative;
 
@@ -747,7 +760,7 @@ input[id=mobile-menu]:checked+div {
 
     position: absolute;
 
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--tj-white);
 
     bottom: 5px;
 
@@ -799,11 +812,11 @@ input[id=mobile-menu]:checked+div {
 
     box-sizing: border-box;
 
-    border: 1px solid #30a76d;
+    border: 1px solid var(--tj-theme-primary);
 
     transition: all ease 0.5s;
 
-    color: #fff;
+    color: var(--tj-white);
 
 }
 
@@ -923,7 +936,7 @@ input[id=mobile-menu]:checked+div {
 
 .description__text a {
 
-    color: #30a76d;
+    color: var(--tj-theme-primary);
 
 }
 
@@ -937,7 +950,7 @@ input[id=mobile-menu]:checked+div {
 
 .w-100-footer {
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
 }
 
@@ -969,7 +982,7 @@ input[id=mobile-menu]:checked+div {
 
     gap: 10px;
 
-    color: #fff;
+    color: var(--tj-white);
 
     font-size: 30px;
 
@@ -979,7 +992,7 @@ input[id=mobile-menu]:checked+div {
 
 .footer__info--c-right {
 
-    color: #fff;
+    color: var(--tj-white);
 
     line-height: 35px;
 
@@ -1089,7 +1102,7 @@ input[id=mobile-menu]:checked+div {
 
     font-size: 25px;
 
-    color: #fff;
+    color: var(--tj-white);
 
 }
 
@@ -1097,7 +1110,7 @@ input[id=mobile-menu]:checked+div {
 
 .footer__links a {
 
-    color: #fff;
+    color: var(--tj-white);
 
 }
 
@@ -1105,7 +1118,7 @@ input[id=mobile-menu]:checked+div {
 
 .footer__send-e {
 
-    color: #fff;
+    color: var(--tj-white);
 
 }
 
@@ -1131,7 +1144,7 @@ input[id=mobile-menu]:checked+div {
 
     width: 245px;
 
-    color: #fff;
+    color: var(--tj-white);
 
     border-radius: 11px;
 
@@ -1233,7 +1246,7 @@ input[id=mobile-menu]:checked+div {
 
 .calculator {
 
-    border: 3px solid #d3d3d3;
+    border: 3px solid var(--tj-off-white);
 
     border-radius: 11px;
 
@@ -1257,13 +1270,13 @@ input[id=mobile-menu]:checked+div {
 
     border: none;
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
     border-radius: 11px;
 
     font-size: 30px;
 
-    color: #fff;
+    color: var(--tj-white);
 
     padding: 0 15px;
 
@@ -1313,7 +1326,7 @@ input[id=mobile-menu]:checked+div {
 
     align-items: center;
 
-    color: #fff;
+    color: var(--tj-white);
 
     border-radius: 11px;
 
@@ -1343,7 +1356,7 @@ input[id=mobile-menu]:checked+div {
 
     font-size: 26px;
 
-    background-color: #30a76d;
+    background-color: var(--tj-theme-primary);
 
     font-weight: 600;
 
