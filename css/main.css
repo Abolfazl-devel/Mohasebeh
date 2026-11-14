@@ -224,32 +224,20 @@ html {
 
 
 
-label[for=mobile-menu] {
+.mobile-menu-but {
 
     display: none;
+    cursor: pointer;
 
 }
 
 
 
-label[for=mobile-menu] img {
+.mobile-menu-but img {
 
     width: 30px;
 
 }
-
-
-
-input[id=mobile-menu] {
-
-    display: none;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
 
 
 .mobile-menu {
@@ -455,19 +443,6 @@ input[id=mobile-menu] {
 /* end header hover */
 
 
-
-/* start header checked */
-
-input[id=mobile-menu]:checked+div {
-
-    right: 0;
-
-}
-
-
-
-/* end header checked */
-
 /* end header */
 
 
@@ -512,7 +487,7 @@ input[id=mobile-menu]:checked+div {
 
 
 
-    label[for=mobile-menu] {
+    .mobile-menu-but {
 
         display: flex;
 
