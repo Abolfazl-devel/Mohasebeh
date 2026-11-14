@@ -13,6 +13,10 @@ function replaceCharAt(str, index, replacement) {
 };
 // replace with position function
 
+// Correct input cursor postion at relodaing page
+output.selectionStart = 1;
+// Correct input cursor postion at relodaing page
+
 //AC
 var AC = document.getElementById('calculator__key--AC');
 //AC
@@ -36,7 +40,6 @@ var errordiscription = document.getElementById('error__description');
 //delete
 var deleteMath = document.getElementById('calculator__key--delete');
 //delete
-
 
 // calculate var
 var equal = document.getElementById('calculator__key--equal');
