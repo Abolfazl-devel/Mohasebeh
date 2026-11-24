@@ -1,14 +1,14 @@
 'use strict';
 // input
-var money = document.getElementById('input_money');
+const money = document.getElementById('input_money');
 // input
 
 // percent
-var percent = document.getElementById('input_percent');
+const percent = document.getElementById('input_percent');
 // percent
 
 //time
-var time = document.getElementById('input_time');
+const time = document.getElementById('input_time');
 //time
 
 //Seperate numbers
@@ -27,23 +27,23 @@ sanitizeInput(time);
 
 
 //Calculate
-var computing = document.getElementsByClassName('compound-calculator__button')[0];
-var output_div = document.getElementById('calculator__output');
+const computing = document.getElementsByClassName('compound-calculator__button')[0];
+const output_div = document.getElementById('calculator__output');
 
 computing.onclick = function () {
   calculation();
 };
 
 function calculation() {
-  var notseparationO = money.value.replace(/,/g, '');
-  var discharging = Number(notseparationO);
-  var notseparationP = percent.value.replace(/,/g, '');
-  var percentage = Number(notseparationP);
-  var notseparationT = time.value.replace(/,/g, '');
-  var excretion = Number(notseparationT);
+  let notseparationO = money.value.replace(/,/g, '');
+  let discharging = Number(notseparationO);
+  let notseparationP = percent.value.replace(/,/g, '');
+  let percentage = Number(notseparationP);
+  let notseparationT = time.value.replace(/,/g, '');
+  let excretion = Number(notseparationT);
   output_div.innerHTML = "";
-  for (var i = 1; i <= excretion; i++) {
-    var output = document.createElement('p');
+  for (let i = 1; i <= excretion; i++) {
+    let output = document.createElement('p');
     output_div.appendChild(output);
     discharging = (discharging * percentage / 100) + discharging;
     output.textContent = (i + ' ' + '-' + ' ' + discharging);
