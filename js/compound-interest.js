@@ -16,7 +16,6 @@ function sanitizeInput(inputElement) {
   inputElement.oninput = function () {
     inputElement.value = inputElement.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1');
     inputElement.value = inputElement.value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    console.log(inputElement.value);
   };
 
 };
